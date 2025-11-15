@@ -1,0 +1,5 @@
+Khi thêm phương thức đó, ngay lập tức code xảy ra lỗi biên dịch. 
+Lỗi này xảy ra do sự xung đột giữa 2 phương thức addDVD(DigitalVideoDisc[] discs) và addDVD(DigitalVideoDisc ... discs)
+Trong java, trình biên dịch sẽ tự động chuyển đổi DigitalVideoDisc ... discs thành 1 mảng DigitalVideoDisc[] discs.
+
+Phương án giải quyết là chỉ giữ lại phương thức addDVD(DigitalVideoDisc ... discs)
