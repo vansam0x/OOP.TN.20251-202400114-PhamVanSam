@@ -1,0 +1,7 @@
++ Những đường dẫn trên nên được thêm vào vì chúng là các tệp do Eclipse tự động tạo ra, chúng không phải là mã nguồn
+
++ Nếu không thêm vào, thì sẽ khiến cho kho lưu trữ có nhiều file rác. Ngoài ra, các thư mục này có thể khác nhau, từ đó có thể xảy ra lỗi khi pull về. 
+
++ Nếu sử dụng các công cụ lập trình Java khác thì ta có thể thêm một số đường dẫn sau : 
+    - Với IntelliJ IDEA : .idea/, *.iml, out/
+    - Với VS code :  .vscode/, lib/, bin/
