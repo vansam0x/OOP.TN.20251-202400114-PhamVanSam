@@ -1,7 +1,5 @@
 package com.hust.kstn.test;
 
-import java.util.*;
-
 import com.hust.kstn.models.*;
 
 public class CartTest {
