@@ -53,16 +53,18 @@ public class Cart {
         return totalCost;
     }
 
+    
     public void print() {
         if(qtyOrdered == 0) {
             System.out.println("The cart is empty");
             return;
         }
-        System.out.println("=== Total items in cart: " + qtyOrdered + " ===");
-        System.out.println("=== All items in cart ===");
+        System.out.println("======================= THE CURRENT CART =======================");
+        System.out.println("Total items : " + qtyOrdered);
         for (int i = 0; i < qtyOrdered; ++i) {
-            System.out.println("[Title]: " + itemsInCart[i].getTitle() + ", " + "[Cost]: " + itemsInCart[i].getCost());
+            System.out.println("- " + itemsInCart[i].toString());
         }
-        System.out.println("===============================================");
+        System.out.println("Subtotal : " + calculateTotalCost() + "$");
+        System.out.println("================================================================");
     }
 }
