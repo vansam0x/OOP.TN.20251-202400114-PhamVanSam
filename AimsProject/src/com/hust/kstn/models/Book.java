@@ -20,6 +20,15 @@ public class Book {
         this.numOfTokens = numOfTokens;
     }
 
+    public Book(String title, String category, double cost, int numOfTokens, List <BookAuthor> authors) {
+        this.id = ++nbBook;
+        this.title = title;
+        this.category = category;
+        this.cost = cost;
+        this.authors = authors;
+        this.numOfTokens = numOfTokens;
+    }
+
     public int getId() {
         return id;
     }
