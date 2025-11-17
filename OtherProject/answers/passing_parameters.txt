@@ -1,0 +1,65 @@
+1. Khi chạy code, tên của 2 học sinh vẫn không thay đổi tại vì khi gọi hàm swap(s1, s2) thì o1 và o2 là bản sao của 2 biến s1 và s2. 
+Do đó hàm swap chỉ có thể đổi được 2 giá trị o1 và o2 mà không đổi được giá trị s1 và s2
+-> Java là ngôn ngữ truyền tham trị 
+
+2. Để swap được 2 giá trị s1 và s2, em sẽ swap các thuộc tính của chúng. 
+Ta sẽ thêm getter và setter vào lớp Student
+
+Khi đó phương thức swap sẽ sửa lại thành 
+
+public static void swap(Student s1, Student s2) {
+    String tempName = s1.getName();
+    int tempStudentId = s1.getStudentId();
+    s1.setName(s2.getName());
+    s1.setStudentId(s2.getStudentId());
+    s2.setName(tempName);
+    s2.setStudentId(tempStudentId);
+}
+
+3. Sơ đồ minh họa 
+
+Ban đầu 
+
+stack       heap 
+---------------------
+s1          (1, "A")
+s2          (2, "B")
+
+Khi dùng 2 lệnh 
+
+String tempName = s1.getName();
+int tempStudentId = s1.getStudentId();
+
+stack                heap 
+------------------------------
+s1                  (1, "A")
+s2                  (2, "B")
+tempName = "A"
+tempStudentId = 1
+
+2 lệnh tiếp theo 
+
+s1.setName(s2.getName());
+s1.setStudentId(s2.getStudentId());
+
+stack                heap 
+-----------------------------
+s1                  (2, "B")
+s2                  (2, "B")
+tempName = "A"
+tempStudentId = 1
+
+
+2 lệnh cuối cùng 
+
+s2.setName(tempName);
+s2.setStudentId(tempStudentId);
+
+stack                heap 
+-----------------------------
+s1                  (2, "B")
+s2                  (1, "A")
+tempName = "A"
+tempStudentId = 1
+
+-> điều phải chứng minh 
