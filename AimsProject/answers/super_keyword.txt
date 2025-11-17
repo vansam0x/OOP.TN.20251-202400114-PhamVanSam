@@ -1,0 +1,3 @@
+Từ khóa super trong Java được dùng để gọi đến lớp cha. 
+
+Câu lệnh super(title, cost, category) chính là lệnh gọi hàm khởi tạo của lớp cha Media và truyền 3 giá trị title, cost, category lên cho nó xử lý.
